@@ -12,5 +12,6 @@ def get_tasks():
 
 # delete task
 
-def delete_task(task):
-    tasks.remove(task)
+def delete_task(task_id):
+    if 0 <= task_id < len(tasks):
+        tasks.pop(task_id)
