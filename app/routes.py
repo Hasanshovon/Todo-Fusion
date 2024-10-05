@@ -1,8 +1,10 @@
 from app import app
+from flask import render_template
+
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template("index.html")
 # create another route
 @app.route("/todo")
 def todo():
-    return "<p>Todo Page</p>"
+    return render_template("todo.html")
